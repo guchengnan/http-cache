@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Cache</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            line-height: 2;
+            list-style-type: none;
+            font-family: '楷体';
+        }
+        body {
+            padding: 10px 20px;
+        }
+        table {
+            width: 50%;
+            font-size: 14px;
+            border-collapse: collapse;
+        }
+        caption {
+            font-size: 20px;
+        }
+        img {
+            width: 50px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>http cache</caption>
+        <thead>
+            <tr>
+                <td>响应头</td>
+                <td>请求资源</td>
+                <td>请求类型</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p>Expires: Thu, 01 Jan 2099 15:59:59 GMT</p>
+                </td>
+                <td><img src="./images/01.jpg" alt=""></td>
+                <td>强缓存</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cache-Control: max-age=5</p>
+                </td>
+                <td><img src="./images/02.jpg" alt=""></td>
+                <td>强缓存</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cache-Control: no-cache</p>
+                    <p>last-modified: Sun, 06 Jun 2021 02:37:52 GMT</p>
+                </td>
+                <td><img src="./images/03.jpg" alt=""></td>
+                <td>协商缓存</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cache-Control: no-cache</p>
+                    <p>etag: "14be0-ub9DuZspap5Z3f93ckEiWsRdVvQ"</p>
+                </td>
+                <td><img src="./images/04.jpg" alt=""></td>
+                <td>协商缓存</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
